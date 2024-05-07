@@ -20,7 +20,6 @@ from werkzeug.utils import secure_filename
 
 # Define a flask app
 app = Flask(__name__)
-app.run(host='0.0.0.0' , port=5000)
 
 # Model saved with Keras model.save()
 MODEL_PATH = 'cancer_model.h5'
@@ -29,8 +28,6 @@ MODEL_PATH = 'cancer_model.h5'
 model = keras.models.load_model(MODEL_PATH,custom_objects={'KerasLayer':hub.KerasLayer})
 
 print('Model loaded. Start serving...')
-
-print('Model loaded. Check http://127.0.0.1:5000/')
 
 classes = {
             0:'Benign',
