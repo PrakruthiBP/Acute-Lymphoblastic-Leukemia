@@ -20,6 +20,7 @@ from werkzeug.utils import secure_filename
 
 # Define a flask app
 app = Flask(__name__)
+app.run(host='0.0.0.0' , port=5000)
 
 # Model saved with Keras model.save()
 MODEL_PATH = 'cancer_model.h5'
