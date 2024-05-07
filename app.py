@@ -42,6 +42,7 @@ def model_predict(img_path, model):
     # Create the array of the right shape to feed into the keras model
     # The 'length' or number of images you can put into the array is
     # determined by the first position in the shape tuple, in this case 1.
+    print("Trying to Predict!")
     img = tf.keras.utils.load_img(img_path, target_size=(224, 224))
     img_array = tf.keras.utils.img_to_array(img)
     img_array = tf.expand_dims(img_array, 0) # Create a batch
